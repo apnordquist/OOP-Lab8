@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            LinkedList mylist = new LinkedList();
+            //new list
+            LinkedList MyList = new LinkedList();
+            //populate list
+            string[] FillList = { "Joe Blow", "Joe Schmoe", "John Smith", "Jane Doe", "Bob Bobberson", "Sam Sammerson", "Dave Daverson" };
+            foreach (string name in FillList)
+            {
+                MyList.AddLast(name);
+            }
+            //print list
+            MyList.PrintList();
         }
     }
 }

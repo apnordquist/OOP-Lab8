@@ -26,3 +26,4 @@ C:\Users\apnor\CPRG211\OOP-Lab8\Lab8\obj\Debug\net8.0\refint\Lab8.dll
 C:\Users\apnor\CPRG211\OOP-Lab8\Lab8\obj\Debug\net8.0\Lab8.pdb
 C:\Users\apnor\CPRG211\OOP-Lab8\Lab8\obj\Debug\net8.0\Lab8.genruntimeconfig.cache
 C:\Users\apnor\CPRG211\OOP-Lab8\Lab8\obj\Debug\net8.0\ref\Lab8.dll
+C:\Users\apnor\CPRG211\OOP-Lab8\Lab8\obj\Debug\net8.0\Lab8.sourcelink.json

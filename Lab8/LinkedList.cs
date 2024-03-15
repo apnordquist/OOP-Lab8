@@ -16,12 +16,12 @@ namespace Lab8
         public void AddFirst(string value)
         {
             Node newNode = new Node(value);
-            if(Head == null)
+            if(Head == null) //replace head and tail if list is empty
             {
                 Head = newNode;
                 Tail = newNode;
             }
-            else
+            else //add exisitng head as next then add node as new head
             {
                 newNode.Next = Head;
                 Head = newNode;
@@ -31,40 +31,40 @@ namespace Lab8
         public void AddLast(string value)
         {
             Node newNode = new Node(value);
-            if (Head == null)
+            if (Head == null) //replace head and tail if list is empty
             {
                 Head = newNode;
             }
-            else
+            else //add new node as the tail's next property
             {
                 Tail.Next = newNode;
             }
-            Tail = newNode;
+            Tail = newNode; //create new tail
             Count++;
         }
         public void RemoveFirst()
         {
             if (Head != null)
             {
-                Head = Head.Next;
+                Head = Head.Next; //replace head with next
                 if (Head == null)
                 {  
                     Tail = null; 
                 }
                 Count--;
             }
-            else
+            else //return message if list is emptry
             {
                 Console.WriteLine("The list is empty");
             }
         }
         public void RemoveLast()
         {
-            if (Head == null)
+            if (Head == null) //return message if list is empty
             {
                 Console.WriteLine("The list is empty");
             }
-            if (Head.Next == null)
+            if (Head.Next == null) //change head to null if only one node
             {
                 Head = null;
                 Tail = null;
@@ -72,11 +72,11 @@ namespace Lab8
             else
             {
                 Node current = Head;
-                while (current.Next.Next != null) 
+                while (current.Next.Next != null) //loop through nodes until the tail is found
                 { 
                     current = current.Next;
                 }
-                current.Next = null;
+                current.Next = null; //replace tail
                 Tail = current;
             }
             Count--;
@@ -86,7 +86,7 @@ namespace Lab8
             if (index > 0 || index <= Count) //index cannot be less than zero or greater than the count
             {
                 Node current = Head;
-                for (int i = 0; i < index -1; i++)
+                for (int i = 0; i < index -1; i++) //adjust index to work with counter
                 {
                     current = current.Next;
                 }
@@ -97,7 +97,7 @@ namespace Lab8
                 return "item is outside of list";
             }
         }
-        public void PrintList()
+        public void PrintList() //added to have print confirmation
         {
             Node current = Head;
             if (current == null)

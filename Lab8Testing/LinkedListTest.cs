@@ -21,41 +21,41 @@ namespace Lab8Testing
         [Test]
         public void AddFirstTest()
         {
-            TestList.AddFirst("Dawn John");
-            string TestValue = TestList.GetValue(1);
+            TestList.AddFirst("Dawn John"); //add new entry
+            string TestValue = TestList.GetValue(1);//return entry in the first position
             Assert.AreEqual("Dawn John", TestValue);
         }
         [Test]
         public void AddLastTest()
         {
-            TestList.AddLast("John Doe");
-            string TestValue = TestList.GetValue(TestList.Count);
+            TestList.AddLast("John Doe"); //add new entry
+            string TestValue = TestList.GetValue(TestList.Count); //return entry in the last position
             Assert.AreEqual("John Doe", TestValue);
         }
         [Test]
         public void RemoveFirstTest()
         {
-            TestList.RemoveFirst();
-            string TestValue = TestList.GetValue(1);
+            TestList.RemoveFirst(); //remove entry
+            string TestValue = TestList.GetValue(1); //return entry in the first position
             Assert.AreEqual("Joe Schmoe", TestValue);
         }
         [Test]
         public void RemoveLastTest()
         {
-            TestList.RemoveLast();
-            string TestValue = TestList.GetValue(TestList.Count);
+            TestList.RemoveLast(); //remove entry
+            string TestValue = TestList.GetValue(TestList.Count); //return entry in the last position
             Assert.AreEqual("Sam Sammerson", TestValue);
         }
         [Test]
         public void RetrieveValueTest()
         {
-            string TestValue = TestList.GetValue(3);
+            string TestValue = TestList.GetValue(3); //get entry at position 3
             Assert.AreEqual("John Smith", TestValue);
         }
         [Test]
         public void LengthTest()
         {
-            int Length = TestList.Count;
+            int Length = TestList.Count; //check counter vs number of entries
             Assert.AreEqual(Length, 7);
         }
 
